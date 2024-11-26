@@ -2,5 +2,7 @@
 </script>
 
 <template>
+	<a href="">asdf</a>
 	Привет мир!
 </template>
+
