@@ -14,9 +14,10 @@ export default [
     },
     pluginJs.configs.recommended,
     ...tseslint.configs.recommended,
-    ...pluginVue.configs["flat/essential"],
+    ...pluginVue.configs["flat/recommended"],
     {
         rules: {
+            // JS
             'semi': ["error", "always"],
             'array-callback-return': ['error', {checkForEach: true}],
             'no-await-in-loop': 'error',
@@ -53,7 +54,24 @@ export default [
             'no-undefined': 'error',
             'no-var': 'error',
             'prefer-const': 'error',
-
+            "comma-dangle": ["error", 'always-multiline']
+        }
+    },
+    {
+        files: ["src/**/*.{ts,tsx,vue}"],
+        rules: {
+            '@typescript-eslint/adjacent-overload-signatures': 'error',
+            'consistent-return': 'off',
+            "@typescript-eslint/consistent-type-definitions": "error",
+            "default-param-last": "off",
+            "@typescript-eslint/default-param-last": "error",
+            "@typescript-eslint/explicit-function-return-type": "error",
+            '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+            "no-empty-function": "off",
+            '@typescript-eslint/no-empty-function': "error",
+            "no-redeclare": "off",
+            '@typescript-eslint/no-redeclare': 'error',
+            "@typescript-eslint/prefer-enum-initializers": 'error',
         }
     },
     {
@@ -64,6 +82,20 @@ export default [
                 {
                     parser: tseslint.parser
                 }
+        },
+        rules: {
+            "vue/block-order": ["error", {
+                "order": [ [ "script", "template" ], "style" ]
+            }],
+            "vue/block-tag-newline": ["error", { "singleline": "always", "multiline": "always", "maxEmptyLines": 2 }],
+            "vue/component-name-in-template-casing": ["error"],
+            "vue/html-button-has-type": 'error',
+            "vue/no-empty-component-block": "error",
+            "vue/no-static-inline-styles": "error",
+            "vue/html-indent": [
+                "error",
+                4
+            ]
         }
     },
     {

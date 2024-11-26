@@ -3,16 +3,22 @@
 
 interface UButtonProps {
 	disabled?: boolean;
+	test?: boolean;
 }
 
 defineProps<UButtonProps>();
 
+
 </script>
 
 <template>
-	<button data-test="button" :class="[classes.UButton, {[classes.disabled]: disabled}]">
-		<slot />
-	</button>
+    <button
+        type="button"
+        data-test="button"
+        :class="[classes.UButton, {[classes.disabled]: disabled}]"
+    >
+        <slot />
+    </button>
 </template>
 
 
