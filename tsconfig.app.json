@@ -23,8 +23,8 @@
     "noUncheckedSideEffectImports": true,
     "noImplicitReturns": true,
     "paths": {
-      "@": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src"],
 }

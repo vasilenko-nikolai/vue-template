@@ -8,7 +8,7 @@ export class RoutePath {
         return Object.entries(pathParams)
             .reduce(
                 (resultPath, [pathParam, paramValue]) => {
-                    return resultPath.replaceAll(`:${pathParam}`, paramValue);
+                    return resultPath.replace(`:${pathParam}`, paramValue);
                 },
                 this.routePath,
             );

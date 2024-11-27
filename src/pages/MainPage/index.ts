@@ -1,3 +1,3 @@
-import {DefineComponent} from "vue";
+import {RouteComponent} from "vue-router";
 
-export const MainPage = async (): Promise<DefineComponent> => await import('./ui/MainPage/MainPage.vue');
+export const MainPage = (): Promise<RouteComponent> => import('./ui/MainPage/MainPage.vue');
