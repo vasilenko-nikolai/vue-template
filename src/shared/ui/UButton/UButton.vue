@@ -15,10 +15,6 @@ defineSlots<{
 	default(): never;
 }>();
 
-defineEmits<{
-	(e: 'click', t: string): void;
-}>();
-
 </script>
 
 <template>
