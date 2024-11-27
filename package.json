@@ -11,8 +11,8 @@
     "build-storybook": "storybook build",
     "lint:vue:fix": "eslint **/*.{vue,ts,tsx,js} --fix",
     "lint:vue": "eslint **/*.{vue,ts,tsx,js}",
-    "lint:scss:fix": "stylelint \"**/*.css\" --fix",
-    "lint:scss": "stylelint \"**/*.css\"",
+    "lint:scss:fix": "stylelint \"**/*.{css,scss,vue}\" --fix",
+    "lint:scss": "stylelint \"**/*.{css,scss,vue}\"",
     "test:unit:all": "vitest"
   },
   "dependencies": {
