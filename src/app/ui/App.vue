@@ -1,14 +1,4 @@
-<script setup lang="ts">
-import UButton from "@/shared/ui/UButton/UButton.vue";
-</script>
-
 <template>
-    <a href="">asdf</a>
-    Привет мир!
-    <UButton
-        test
-        disabled
-    >
-        Нажми меня
-    </UButton>
+    <h1>Привет Vue</h1>
+    <router-view />
 </template>

@@ -5,4 +5,4 @@ export enum RouteName {
 
 export const RoutePaths: Record<RouteName, string> = {
     [RouteName.MAIN]: '/',
-}
+};

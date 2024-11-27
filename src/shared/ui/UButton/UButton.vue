@@ -1,13 +1,23 @@
-
 <script setup lang="ts">
 
 interface UButtonProps {
+	/**
+	 * Отключает кнопку для нажатия
+	 */
 	disabled?: boolean;
-	test?: boolean;
 }
 
-defineProps<UButtonProps>();
+withDefaults(defineProps<UButtonProps>(), {
+	disabled: false,
+});
 
+defineSlots<{
+	default(): never;
+}>();
+
+defineEmits<{
+	(e: 'click', t: string): void;
+}>();
 
 </script>
 
@@ -22,12 +32,16 @@ defineProps<UButtonProps>();
 </template>
 
 
-<style module="classes">
-.UButton {
-	color: black;
+
+<style module="classes" lang="scss">
+.uButton {
+	color: var(--first-color);
+
 }
 
 .disabled {
 	cursor: not-allowed;
+	opacity: .5;
 }
+
 </style>

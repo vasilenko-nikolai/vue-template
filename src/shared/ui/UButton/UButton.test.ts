@@ -9,22 +9,22 @@ describe('UButton', () => {
         const wrapper = mount(UButton, {
             props: {
                 disabled: true,
-            }
-        })
+            },
+        });
 
-        const button = wrapper.get('[data-test="button"]')
+        const button = wrapper.get('[data-test="button"]');
         const strings = button.classes();
-        expect(strings).contains('disabled')
-    })
+        expect(strings).contains('disabled');
+    });
 
     it("button hasn't disabled", () => {
         const wrapper = mount(UButton, {
             props: {
                 disabled: false,
-            }
-        })
-        const button = wrapper.get('[data-test="button"]')
-        expect(button.classes()).not.contains('disabled')
-    })
+            },
+        });
+        const button = wrapper.get('[data-test="button"]');
+        expect(button.classes()).not.contains('disabled');
+    });
 
-})
+});
