@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Visual regression test
+.lost-pixels/report.*
+.lost-pixels/difference-images
+.lost-pixels/current-images
+.lost-pixels/.gitignore
+# Storybook static
+storybook-static
+

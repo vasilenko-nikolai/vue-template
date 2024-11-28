@@ -14,8 +14,10 @@
     "lint:scss:fix": "stylelint \"**/*.{css,scss,vue}\" --fix",
     "lint:scss": "stylelint \"**/*.{css,scss,vue}\"",
     "test:unit:all": "vitest",
-    "lost-pixel:update": "lost-pixel update",
-    "lost-pixel": "lost-pixel"
+    "test:ui": "lost-pixel",
+    "test:ui:update": "lost-pixel update",
+    "test:ui:report": "reg-cli ./.lost-pixels/baseline-images ./.lost-pixels/current-images ./.lost-pixels/difference-images -R ./.lost-pixels/report.html -J ./.lost-pixels/report.json",
+    "preview:test:ui:report": "http-server ./.lost-pixels"
   },
   "dependencies": {
     "pinia": "^2.2.6",
@@ -23,6 +25,7 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "@chromatic-com/storybook": "^3.2.2",
     "@eslint/js": "^9.15.0",
     "@playwright/test": "^1.49.0",
@@ -43,6 +46,7 @@
     "jsdom": "^25.0.1",
     "lost-pixel": "^3.22.0",
     "postcss-html": "^1.7.0",
+    "reg-cli": "^0.18.9",
     "rollup-plugin-visualizer": "^5.12.0",
     "sass-embedded": "^1.81.0",
     "storybook": "^8.4.5",

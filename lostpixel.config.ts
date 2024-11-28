@@ -8,5 +8,6 @@ export const config: CustomProjectConfig = {
   imagePathBaseline: './.lost-pixels/baseline-images',
   imagePathCurrent: "./.lost-pixels/current-images",
   imagePathDifference: "./.lost-pixels/difference-images",
+  failOnDifference: true,
 };
 
