@@ -21,7 +21,7 @@ defineSlots<{
     <button
         type="button"
         data-test="button"
-        :class="[classes.UButton, {[classes.disabled]: disabled}]"
+        :class="[classes.uButton, {[classes.disabled]: disabled}]"
     >
         <slot />
     </button>
@@ -32,7 +32,8 @@ defineSlots<{
 <style module="classes" lang="scss">
 .uButton {
 	color: var(--first-color);
-
+	padding: 15px;
+	border-radius: 5px;
 }
 
 .disabled {
