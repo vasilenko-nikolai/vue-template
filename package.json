@@ -16,8 +16,8 @@
     "test:unit:all": "vitest",
     "test:ui": "lost-pixel",
     "test:ui:update": "lost-pixel update",
-    "test:ui:report": "reg-cli ./.lost-pixels/baseline-images ./.lost-pixels/current-images ./.lost-pixels/difference-images -R ./.lost-pixels/report.html -J ./.lost-pixels/report.json",
-    "preview:test:ui:report": "http-server ./.lost-pixels"
+    "test:ui:report": "reg-cli ./.lost-pixels/current-images ./.lost-pixels/baseline-images ./.lost-pixels/difference-images -R ./.lost-pixels/report.html -J ./.lost-pixels/report.json",
+    "preview:test:ui:report": "http-server ./.lost-pixels -c-1"
   },
   "dependencies": {
     "pinia": "^2.2.6",

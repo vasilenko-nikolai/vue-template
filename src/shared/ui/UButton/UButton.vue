@@ -31,8 +31,8 @@ defineSlots<{
 
 <style module="classes" lang="scss">
 .uButton {
-	color: var(--first-color);
-	padding: 15px;
+	color: var(--reversed-first-color);
+	padding: 20px;
 	border-radius: 5px;
 }
 
